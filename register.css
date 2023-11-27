@@ -204,7 +204,11 @@
   }
   
   @media only screen and (max-width: 768px) {
-    
+    .container .card h2 {
+        color: #fff;
+        font-size: 1em;
+        padding: 10px 0;
+      }
   }
 
 
