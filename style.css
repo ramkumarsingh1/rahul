@@ -309,6 +309,7 @@ main .event-details div:hover{
     background: #bb02ff;
   }
   
+  
   @keyframes colorChange {
     0% {
       color: #fff;
