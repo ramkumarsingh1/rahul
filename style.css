@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: black;
+    color: #fff;
+}
+ul{
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+a:hover{
+    color: black;
+}
+.navbar {
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(202, 48, 48);
+    color: #ffff;
+}
+.navbar ul{
+    display: flex;
+    gap: 4rem;
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0px auto;
+}
+.navbar .toggle_btn{
+    color: #ffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.haier_me{
+    background-color: rgb(247, 103, 7);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+.haier_me:hover{
+    scale: 1.05;
+    color: white;
+
+}
+.haier_me:active{
+    scale: 0.95;
+}
+/* dropdown menue */
+
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: rgb(107, 46, 82);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu.open{
+    height: 280px;
+}
+.dropdown_menu .haier_me{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+@media  ( max-width : 800px){
+    .navbar ul{
+        display: none;
+    }
+    .navbar .haier_me{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+}
+
+
+.panel{
+    width: 100%;
+    height: 100vh;
+}
+.panel img{
+    width: 100%;
+    height: 100vh;
+}
+.panel1{
+    display: none;
+}
+@media (max-width : 800px){
+    .panel{
+        display: none;
+    }
+    .panel1{
+        display: block;
+    }
+    .panel1 img{
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+
+/* countdown */
+.event-container {
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px;
+    border: 2px;
+    border-radius: transparent;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.countdown {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+
+/* event details
+
+main {
+    padding: 20px;
+    text-align: center;
+    background-color: grey;
+}
+
+main h2 {
+    color: white;
+    font-size: 30px;
+    font-size: 800;
+}
+
+ main p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+}
+
+ main .event-details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+main .event-details h3{
+    color: rgb(32, 31, 31);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+main .event-details div {
+    flex: 1;
+    padding: 30px;
+    margin: 10px;
+    background-color: rgb(245, 122, 35);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(241, 229, 229, 0.1);
+    transition: ease 0.5s;
+
+}
+main .event-details div:hover{
+    background-color: rgb(102, 255, 0);
+    transform: scaleY(1.1);
+} */
+
+
+
+
+
+
+.container {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .container .card {
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    transition: .5s ease-in-out;
+  }
+  
+  .container:hover .card {
+    filter: blur(20px);
+    transform: scale(.9);
+    opacity: .5;
+  }
+  
+  .container .card:hover {
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .container .card:hover .circle {
+    clip-path: circle(600px);
+  }
+  
+  .container .card:hover .content p {
+    color: #fff;
+  }
+  
+  .container .card:hover .content a {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .2),
+                -1px -1px 2px rgba(255, 255, 255, .4);
+  }
+  
+  .container .card .content a:active {
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .1),
+                inset 5px 5px 5px rgba(0, 0, 0, .04),
+                inset -5px -5px 5px rgba(255, 255, 255, .07),
+                inset -1px -1px 2px rgba(255, 255, 255, .4);
+  }
+  
+  .container .card .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+    transition: 1s ease-in-out;
+  }
+  
+  .container .card h2 {
+    color: #fff;
+    font-size: 4.5em;
+    padding: 30px 0;
+  }
+  
+  .container .card .content {
+    position: absolute;
+    bottom: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container .card .content p {
+    color: #666;
+    transition: .5s ease-in-out;
+  }
+  
+  .container .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: .8s ease-in-out;
+  }
+  
+  .container .card:nth-child(1) .circle,
+  .container .card:nth-child(1) .content a {
+    background: #ffaf00;
+  }
+  
+  .container .card:nth-child(2) .circle,
+  .container .card:nth-child(2) .content a {
+    background: #da2268;
+  }
+  
+  .container .card:nth-child(3) .circle,
+  .container .card:nth-child(3) .content a {
+    background: #bb02ff;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: #fff;
+    }
+  
+    50% {
+      color: #b1b493;
+    }
+  
+    80% {
+      color: #4f8a8b;
+    }
+  
+    100% {
+      color: #fff;
+    }
+  }
+  
+  
+  
+  @media only screen and (max-width: 992px) {
+   
+  }
+  
+  @media only screen and (max-width: 768px) {
+    
+  }
+
+
+
+
+
+
+/* footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.footer p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+#back-to-top {
+  
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: chocolate;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frashbash2023</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5d5441cdc0.js" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">FreshBash-2023</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Galary</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="register.html" class="haier_me">Register</a>
+        <div for="check" class="toggle_btn" >
+            <i class="fa solid fa-bars"></i>
+        </div>
+    </nav>
+    <div class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Galary</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="register.html" class="haier_me">Register</a></li>
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa solid fa-xmark'
+            : 'fa solid fa-bars'
+        }
+    </script>
+
+
+<div class="panel">
+    <img src="img/finalllll.jpg" alt="">
+</div>
+<div class="panel1">
+    <img src="img/FINALPROTRIATE.jpg" alt="">
+</div>
+
+<!-- count down -->
+<div class="event-container">
+    <h1>College Fresher Party</h1>
+    <p>Welcome to the most exciting event of the year!</p>
+
+    <div class="countdown" id="countdown"></div>
+
+    <script>
+        // Set the date we're counting down to
+        const countDownDate = new Date("Dec 2, 2023 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "The party is here!";
+            }
+        }, 1000);
+    </script>
+</div>
+
+
+<!-- event details -->
+
+<main>
+    <h2>Event Details</h2>
+    <p>Get ready for an amazing fresher party with music, dance, and lots of surprises!</p>
+
+    <!-- <div class="event-details">
+        <div>
+            <h3>Date</h3>
+            <p>Decenber 2, 2023</p>
+        </div>
+        <div>
+            <h3>Time</h3>
+            <p>11:00 PM onwards</p>
+        </div>
+        <div>
+            <h3>Location</h3>
+            <p>BNGI Campus</p>
+        </div>
+    </div>
+</main> -->
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="card">
+        <div class="circle">
+            <h2>01</h2>
+        </div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, perspiciatis mollitia ducimus
+                consequuntur harum aspernatur?</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="circle">
+            <h2>02</h2>
+        </div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, perspiciatis mollitia ducimus
+                consequuntur harum aspernatur?</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="circle">
+            <h2>03</h2>
+        </div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, perspiciatis mollitia ducimus
+                consequuntur harum aspernatur?</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+</div>
+
+
+    
+    <!-- Footer -->
+
+    <div class="footer">
+        <a href="#">Photos</a>
+        <a href="#">Videos</a>
+        <a href="#">Contact</a>
+        <p>NH-24, Sitapur Road, B.K.T., Lucknow - 226201</p>
+
+        <div class="social-icons">
+            <a href=""><i class="fas fa-envelope"></i></a>
+            <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/freshbash_bngi/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div id="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+        <p>&copy; 2023 College Fresher's Event</p>
+    </div>
+
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("back-to-top").style.display = "block";
+            } else {
+                document.getElementById("back-to-top").style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+</body>
+</html>

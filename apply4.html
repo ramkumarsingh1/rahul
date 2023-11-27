@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frashbash2023</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="apply.css">
+    <script src="https://kit.fontawesome.com/5d5441cdc0.js" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">FreshBash-2023</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Galary</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="register.html" class="haier_me">Register</a>
+        <div for="check" class="toggle_btn" >
+            <i class="fa solid fa-bars"></i>
+        </div>
+    </nav>
+    <div class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Galary</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="register.html" class="haier_me">Register</a></li>
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa solid fa-xmark'
+            : 'fa solid fa-bars'
+        }
+    </script>
+
+
+<form id="form">
+    <div class="container">
+        <center>
+            <h1> ME, EE, CE AIML Student Registeration Form </h1>
+        </center>
+        <hr>
+        <div id="res"></div>
+        <div class="div">
+            <label>
+                Roll no :
+            </label>
+            <select name="Roll no">
+                <option value="N/A">Select</option>
+                <!-- Mechanical -->
+                <!-- <option value="2204310400001">2204310400001</option>
+                <option value="2204310400002">2204310400002</option>
+                <option value="2204310400003">2204310400003</option>
+                <option value="2204310400004">2204310400004</option>
+                <option value="2204310400005">2204310400005</option>
+                <option value="2204310400006">2204310400006</option>
+                <option value="2204310400007">2204310400007</option>
+                <option value="2204310400008">2204310400008</option>
+                <option value="2204310400009">2204310400009</option>
+                <option value="2204310400010">2204310400010</option>
+
+                <option value="2204310400011">2204310400011</option>
+                <option value="2204310400012">2204310400012</option>
+                <option value="2204310400013">2204310400013</option>
+                <option value="2204310400014">2204310400014</option>
+                <option value="2204310400015">2204310400015</option>
+                <option value="2204310400016">2204310400016</option>
+                <option value="2204310400017">2204310400017</option>
+                <option value="2204310400018">2204310400018</option>
+                <option value="2204310400019">2204310400019</option>
+                <option value="2204310400020">2204310400020</option>
+
+                <option value="2204310400021">2204310400021</option>
+                <option value="2204310400022">2204310400022</option>
+                <option value="2204310400023">2204310400023</option>
+                <option value="2204310400024">2204310400024</option>
+                <option value="2204310400025">2204310400025</option>
+                <option value="2204310400026">2204310400026</option>
+                <option value="2204310400027">2204310400027</option>
+                <option value="2204310400028">2204310400028</option>
+                <option value="2204310400029">2204310400029</option>
+                <option value="2204310400030">2204310400030</option>
+                <option value="2204310400031">2204310400031</option>
+
+                <!-- Electrical -->
+
+                <option value="2204310200001">2204310200001</option>
+                <option value="2204310200002">2204310200002</option>
+                <option value="2204310200003">2204310200003</option>
+                <option value="2204310200004">2204310200004</option>
+                <option value="2204310200005">2204310200005</option>
+                <option value="2204310200006">2204310200006</option>
+                <option value="2204310200007">2204310200007</option>
+                <option value="2204310200008">2204310200008</option>
+                <option value="2204310200009">2204310200009</option>
+                <option value="2204310200010">2204310200010</option>
+
+                <option value="2204310200011">2204310200011</option>
+                <option value="2204310200012">2204310200012</option>
+                <option value="2204310200013">2204310200013</option>
+                <option value="2204310200014">2204310200014</option>
+                <option value="2204310200015">2204310200015</option>
+                <option value="2204310200016">2204310200016</option>
+                <option value="2204310200017">2204310200017</option>
+                <option value="2204310200018">2204310200018</option>
+                <option value="2204310200019">2204310200019</option>
+                <option value="2204310200020">2204310200020</option>
+
+
+                <!-- Civil -->
+                <option value="2204310000001">2204310000001</option>
+                <option value="2204310000002">2204310000002</option>
+                <option value="2204310000003">2204310000003</option>
+                <option value="2204310000004">2204310000004</option>
+                <option value="2204310000005">2204310000005</option>
+                <option value="2204310000006">2204310000006</option>
+                <option value="2204310000007">2204310000007</option>
+                <option value="2204310000008">2204310000008</option>
+                <option value="2204310000009">2204310000009</option>
+                <option value="2204310000010">2204310000010</option>
+
+                <option value="2204310000011">2204310000011</option>
+                <option value="2204310000012">2204310000012</option>
+                <option value="2204310000013">2204310000013</option>
+                <option value="2204310000014">2204310000014</option>
+                <option value="2204310000015">2204310000015</option>
+                <option value="2204310000016">2204310000016</option>
+                <option value="2204310000017">2204310000017</option>
+                <option value="2204310000018">2204310000018</option>
+                <option value="2204310000019">2204310000019</option>
+                <option value="2204310000020">2204310000020</option> -->
+            </select>
+
+        </div>
+        <label>Name </label>
+        <input type="text" name="Name" placeholder="Name" size="20" required />
+        <div class="div">
+            <label>
+                Branch :
+            </label>
+            <select name="Branch">
+                <option value="Mechanical">Mechanical</option> 
+                <option value="Electrical">Electrical</option>
+                <option value="Civil">Civil</option>
+            </select>
+        </div>
+        <div class="div">
+            <label>
+                Year :
+            </label>
+           <input type="radio" value="1st" name="Year" > 1st
+            <input type="radio" value="2nd" name="Year" >2nd
+        </div>
+        <label>
+            Phone :
+        </label>
+        <input type="text" name="Phone" placeholder="Phone no." size="10" / required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="Email" required>
+        <button name="btn" type="submit" class="registerbtn">Register</button>
+    </div>
+</form>
+<script>
+    let url = 'https://script.google.com/macros/s/AKfycbzQ2hnyiEqpmlT5hzouEUOXeQpRQE4c-JPy02QHuQCCsDb18oo5dyA2FgvwKbY6QqXEWg/exec'
+    let form = document.querySelector('#form');
+    form.addEventListener("submit",(e)=>{
+        e.target.btn.innerHTML="Submitting";
+        let d=new FormData(form);
+        fetch(url,{
+            method:"POST",
+            body:d
+        }).then((res)=>res.text())
+        .then((finalRes)=>{
+            e.target.btn.innerHTML="Submit"
+            document.getElementById("res").innerHTML=finalRes;
+            form.reset();
+            setTimeout(()=>{
+                document.getElementById("res").innerHTML='';
+            },5000)
+            console.log(finalRes)
+        })
+        e.preventDefault();
+    })
+</script>
+
+    
+    <!-- footer -->
+
+    <div class="footer">
+        <a href="#">Photos</a>
+        <a href="#">Videos</a>
+        <a href="#">Contact</a>
+        <p>NH-24, Sitapur Road, B.K.T., Lucknow - 226201</p>
+
+        <div class="social-icons">
+            <a href=""><i class="fas fa-envelope"></i></a>
+            <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div id="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+        <p>&copy; 2023 College Fresher's Event</p>
+    </div>
+
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("back-to-top").style.display = "block";
+            } else {
+                document.getElementById("back-to-top").style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+</body>
+</html>
