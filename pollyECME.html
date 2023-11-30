@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="apply.css">
     <script src="https://kit.fontawesome.com/5d5441cdc0.js" crossorigin="anonymous"></script>
-    
+
 
 </head>
+
 <body>
     <nav class="navbar">
         <div class="logo">
@@ -23,7 +25,7 @@
             <li><a href="#">Contact</a></li>
         </ul>
         <a href="register.html" class="haier_me">Register</a>
-        <div for="check" class="toggle_btn" >
+        <div for="check" class="toggle_btn">
             <i class="fa solid fa-bars"></i>
         </div>
     </nav>
@@ -45,81 +47,142 @@
             const isOpen = dropDownMenu.classList.contains('open')
 
             toggleBtnIcon.classList = isOpen
-            ? 'fa solid fa-xmark'
-            : 'fa solid fa-bars'
+                ? 'fa solid fa-xmark'
+                : 'fa solid fa-bars'
         }
     </script>
 
 
-<form id="form">
-    <div class="bihari">
-        <center>
-            <h1>CSE, IT Registeration</h1>
-        </center>
-        <hr>
-        <div id="res"></div>
-        <div class="div">
-            <label>
-                Roll no :
-            </label>
-            <select name="Roll no">
-           
+    <form id="form">
+        <div class="bihari">
+            <center>
+                <h1>CSE, IT Registeration</h1>
+            </center>
+            <hr>
+            <div id="res"></div>
+            <div class="div">
+                <label>
+                    Roll no :
+                </label>
+                <select name="Roll no">
 
+                    <!-- Mechanical -->
 
-            </select>
-        </div>
-        <label>Name </label>
-        <input type="text" name="Name" placeholder="Name" size="15" required />
-        <div class="div">
-            <label>
-                Branch :
-            </label>
-            <select name="Branch">
-                <option value="EC">EC</option> 
-                <option value="ME">ME</option>
-            </select>
-        </div>
-        <div class="div">
-            <label>
-                Year :
-            </label>
-           <!-- <input type="radio" value="1st" name="Year" > 1st -->
-            <input type="radio" value="2nd" name="Year" >2nd
-        </div>
-        <label>
-            Phone :
-        </label>
-        <input type="text" name="Phone" placeholder="Phone no." size="10" / required>
+                    <!-- <option value="E22226036700001">E22226036700001</option> -->
+                    <!-- <option value="E22226036700002">E22226036700002</option> -->
+                    <option value="E22226036700003">E22226036700003</option>
+                    <option value="E22226036700004">E22226036700004</option>
+                    <option value="E22226036700005">E22226036700005</option>
+                    <option value="E22226036700006">E22226036700006</option>
+                    <option value="E22226036700007">E22226036700007</option>
+                    <option value="E22226036700012">E22226036700012</option>
+                    <!-- <option value="E22226036700013">E22226036700013</option> -->
+                    <option value="E22226036700014">E22226036700014</option>
+                    <!-- <option value="E22226036700016">E22226036700016</option> -->
+                    <option value="E22226036700017">E22226036700017</option>
+                    <!-- <option value="E22226036700018">E22226036700018</option> -->
+                    <option value="E22226036700019">E22226036700019</option>
+                    <option value="E22226036700020">E22226036700020</option>
+                    <option value="E22226036700021">E22226036700021</option>
+                    <!-- <option value="E22226036700022">E22226036700022</option> -->
+                    <!-- <option value="E22226036700023">E22226036700023</option> -->
+                    <option value="E22226036700024">E22226036700024</option>
+                    <!-- <option value="E22226036700025">E22226036700025</option> -->
+                    <!-- <option value="E22226036700026">E22226036700026</option> -->
+                    <option value="E22226036700028">E22226036700028</option>
+                    <!-- <option value="E22226036700029">E22226036700029</option> -->
+                    <option value="E22226036700030">E22226036700030</option>
+                    <!-- <option value="E22226036700031">E22226036700031</option> -->
+                    <!-- <option value="E22226036700032">E22226036700032</option> -->
+                    <!-- <option value="E22226036700034">E22226036700034</option> -->
+                    <!-- <option value="E22226036700035">E22226036700035</option> -->
+                    <option value="E22226036700036">E22226036700036</option>
+                    <option value="E22226036700037">E22226036700037</option>
+                    <option value="E22226036700038">E22226036700038</option>
+                    <option value="E22226036700039">E22226036700039</option>
+                    <option value="E22226036700040">E22226036700040</option>
+                    <option value="E22226036700041">E22226036700041</option>
+                    <!-- <option value="E22226036700043">E22226036700043</option> -->
+                    <!-- <option value="E22226036700044">E22226036700044</option> -->
+                    <option value="E22226036700046">E22226036700046</option>
+                    <!-- <option value="E22226036700047">E22226036700047</option> -->
+                    <!-- <option value="E22226036700049">E22226036700049</option> -->
+                    <!-- <option value="E22226036700050">E22226036700050</option> -->
+                    <!-- <option value="E22226036700051">E22226036700051</option> -->
+                    <option value="E22226036700055">E22226036700055</option>
+                    <!-- <option value="E22226036700058">E22226036700058</option> -->
+                    <!-- <option value="E22226036700061">E22226036700061</option> -->
+                    <!-- <option value="E22226036700063">E22226036700063</option> -->
 
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="Email" required>
-        <button name="btn" type="submit" class="registerbtn">Register</button>
-    </div>
-</form>
-<script>
-    let url = ''
-    let form = document.querySelector('#form');
-    form.addEventListener("submit",(e)=>{
-        e.target.btn.innerHTML="Submitting";
-        let d=new FormData(form);
-        fetch(url,{
-            method:"POST",
-            body:d
-        }).then((res)=>res.text())
-        .then((finalRes)=>{
-            e.target.btn.innerHTML="Submit"
-            document.getElementById("res").innerHTML=finalRes;
-            form.reset();
-            setTimeout(()=>{
-                document.getElementById("res").innerHTML='';
-            },5000)
-            console.log(finalRes)
+                    <!-- Electronics -->
+
+                    <option value="E22226033000001">E22226033000001</option>
+                    <!-- <option value="E22226033000003">E22226033000003</option> -->
+                    <option value="E22226033000004">E22226033000004</option>
+                    <!-- <option value="E22226033000005">E22226033000005</option> -->
+                    <option value="E22226033000007">E22226033000007</option>
+                    <!-- <option value="E22226033000008">E22226033000008</option> -->
+                    <option value="E22226033000010">E22226033000010</option>
+                    <option value="E22226033000011">E22226033000011</option>
+                    <!-- <option value="E22226033000014">E22226033000014</option> -->
+                    <option value="E22226033000016">E22226033000016</option>
+                    <option value="E22226033000019">E22226033000019</option>
+                    <option value="E22226033000025">E22226033000025</option>
+
+                </select>
+            </div>
+            <label>Name </label>
+            <input type="text" name="Name" placeholder="Name" size="15" required />
+            <div class="div">
+                <label>
+                    Branch :
+                </label>
+                <select name="Branch">
+                    <option value="EC">EC</option>
+                    <option value="ME">ME</option>
+                </select>
+            </div>
+            <div class="div">
+                <label>
+                    Year :
+                </label>
+                <!-- <input type="radio" value="1st" name="Year" > 1st -->
+                <input type="radio" value="2nd" name="Year">2nd
+            </div>
+            <label>
+                Phone :
+            </label>
+            <input type="text" name="Phone" placeholder="Phone no." size="10" / required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="Email" required>
+            <button name="btn" type="submit" class="registerbtn">Register</button>
+        </div>
+    </form>
+    <script>
+        let url = 'https://script.google.com/macros/s/AKfycbwZzBSDqveMZJM2bpU-3Fj0VKDXwhGpnCoDYfZEuuAZb4KZSTF8E7rMskWVp36KMP9C/exec'
+        let form = document.querySelector('#form');
+        form.addEventListener("submit", (e) => {
+            e.target.btn.innerHTML = "Submitting";
+            let d = new FormData(form);
+            fetch(url, {
+                method: "POST",
+                body: d
+            }).then((res) => res.text())
+                .then((finalRes) => {
+                    e.target.btn.innerHTML = "Submit"
+                    document.getElementById("res").innerHTML = finalRes;
+                    form.reset();
+                    setTimeout(() => {
+                        document.getElementById("res").innerHTML = '';
+                    }, 5000)
+                    console.log(finalRes)
+                })
+            e.preventDefault();
         })
-        e.preventDefault();
-    })
-</script>
+    </script>
 
-    
+
     <!-- footer -->
 
     <div class="footer">
@@ -159,4 +222,5 @@
 
 
 </body>
+
 </html>
