@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frashbash2023</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="apply2.css">
+    <link rel="stylesheet" href="apply.css">
     <script src="https://kit.fontawesome.com/5d5441cdc0.js" crossorigin="anonymous"></script>
     
 
@@ -54,7 +54,7 @@
 <form id="form">
     <div class="bihari">
         <center>
-            <h1> Polytechnic Registeration</h1>
+            <h1> B.tech 1st Year Registeration</h1>
         </center>
         <hr>
         
@@ -63,10 +63,16 @@
         <input type="text" name="Name" placeholder="Name" size="15" required />
         <div class="div">
             <label>
-                Year :
+                Section :
             </label>
-           <input type="radio" value="1st" name="Year" > 1st
-            <input type="radio" value="2nd" name="Year" >2nd
+            <select name="Section">
+                <option value="A">A</option>
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="B">B</option>
+                <option value="B1">B1</option>
+                <option value="B2">B2</option>
+            </select>
         </div>
         <label>
             Phone :
@@ -81,7 +87,7 @@
 
 
 <script>
-    let url = 'https://script.google.com/macros/s/AKfycbyomERw0iqTag8xcyFRXrY_oU8g4YjdrNWxf0jqNqFPi68DSyi9zQRQv6c-q9Ta_ton/exec'
+    let url = 'https://script.google.com/macros/s/AKfycbzsT-wgadXGjdkC7oqpA-IVaF7itiiZjMILz4DSpdsBAn6k50-RXCkT5thtDOZA6JcD/exec'
     let form = document.querySelector('#form');
     form.addEventListener("submit",(f)=>{
         f.target.btn.innerHTML="Submitting....";
@@ -110,7 +116,7 @@
     <div class="footer">
         <a href="#">Photos</a>
         <a href="#">Videos</a>
-        <a href="#">Contact</a>
+        <a href="contact.html">Contact</a>
         <p>NH-24, Sitapur Road, B.K.T., Lucknow - 226201</p>
 
         <div class="social-icons">
