@@ -128,9 +128,13 @@
   .container .card:nth-child(8) .content a {
     background: #da2268;
   }
-  .container .card:nth-child(8) .circle,
+  .container .card:nth-child(9) .circle,
   .container .card:nth-child(9) .content a {
     background: #bb02ff;
+  }
+  .container .card:nth-child(9) .circle,
+  .container .card:nth-child(9) .content a {
+    background: #ffaf00;
   }
   
   @keyframes colorChange {
