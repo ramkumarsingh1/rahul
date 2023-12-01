@@ -136,6 +136,10 @@
   .container .card:nth-child(9) .content a {
     background: #ffaf00;
   }
+  .container .card:nth-child(10) .circle,
+  .container .card:nth-child(10) .content a {
+    background: #bb02ff;
+  }
   
   @keyframes colorChange {
     0% {
