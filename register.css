@@ -140,6 +140,10 @@
   .container .card:nth-child(10) .content a {
     background: #bb02ff;
   }
+  .container .card:nth-child(11) .circle,
+  .container .card:nth-child(11) .content a {
+    background: #da2268;
+  }
   
   @keyframes colorChange {
     0% {
