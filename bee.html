@@ -54,59 +54,72 @@
 <form id="form">
     <div class="bihari">
         <center>
-            <h1> Lateral  Registeration</h1>
+            <h1> EE Registeration Form </h1>
         </center>
         <hr>
-        
         <div id="res"></div>
+        <div class="div">
+            <label>
+                Roll no :
+            </label>
+            <select name="Roll no">
+                <!-- EE -->
+                <option value="2204310200001">2204310200001</option>
+                <option value="2204310200002">2204310200002</option>
+                <option value="2204310200003">2204310200003</option>
+                <option value="2204310200004">2204310200004</option>
+                <option value="2204310200005">2204310200005</option>
+                <option value="2204310200006">2204310200006</option>
+                <option value="2204310200007">2204310200007</option>
+                <option value="2204310200008">2204310200008</option>
+                <option value="2204310200010">2204310200010</option>
+                <option value="2204310200011">2204310200011</option>
+                <option value="2204310200013">2204310200013</option>
+                <option value="2204310200016">2204310200016</option>
+                <option value="2204310200019">2204310200019</option>
+              
+            </select>
+        </div>
         <label>Name </label>
-        <input type="text" name="Name" placeholder="Name" size="15" required />
+        <input type="text" name="Name" placeholder="Name" size="20" required />
         <div class="div">
             <label>
                 Branch :
             </label>
             <select name="Branch">
-                <option value="DS">DS</option>
-                <option value="AIML">AIML</option>
-                <option value="CSE">CSE</option>
-                <option value="IT">IT</option>
-                <option value="ME">ME</option>
-                <option value="CE">CE</option>
-                <option value="EC">EC</option>
-                <option value="EE">EE</option>
+                <option value="EE">EE </option> 
+            
             </select>
         </div>
         <div class="div">
             <label>
                 Year :
             </label>
-           <input type="radio" value="1st" name="Year" > 1st
+           <!-- <input type="radio" value="1st" name="Year" > 1st -->
             <input type="radio" value="2nd" name="Year" >2nd
         </div>
         <label>
             Phone :
         </label>
-        <input type="text" name="Phone" placeholder="phone no." size="10" / required>
+        <input type="text" name="Phone" placeholder="Phone no." size="10" / required>
 
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Enter Email" name="Email" required>
         <button name="btn" type="submit" class="registerbtn">Submit</button>
     </div>
 </form>
-
-
 <script>
-    let url = 'https://script.google.com/macros/s/AKfycbzuUeHwCvFjMN21HbyaErncRIY6ooIKgZ-ki89pK7XjbKc36BXMIqdbhnavl03hTd1F/exec'
+    let url = 'https://script.google.com/macros/s/AKfycbyQ19TMIvxhi7ayg5sAoQhADl7CPYrSSB5PonHFhi-mfdvn1kB80TwOpXk92Cj_DbfRvg/exec'
     let form = document.querySelector('#form');
-    form.addEventListener("submit",(f)=>{
-        f.target.btn.innerHTML="Submitting....";
+    form.addEventListener("submit",(e)=>{
+        e.target.btn.innerHTML="Submitting";
         let d=new FormData(form);
         fetch(url,{
             method:"POST",
             body:d
         }).then((res)=>res.text())
         .then((finalRes)=>{
-            f.target.btn.innerHTML="Submit"
+            e.target.btn.innerHTML="Submit"
             document.getElementById("res").innerHTML=finalRes;
             form.reset();
             setTimeout(()=>{
@@ -114,18 +127,17 @@
             },5000)
             console.log(finalRes)
         })
-        f.preventDefault();
+        e.preventDefault();
     })
 </script>
 
-
     
-    <!-- Footer -->
+    <!-- footer -->
 
     <div class="footer">
         <a href="#">Photos</a>
         <a href="#">Videos</a>
-        <a href="contact.html">Contact</a>
+        <a href="#">Contact</a>
         <p>NH-24, Sitapur Road, B.K.T., Lucknow - 226201</p>
 
         <div class="social-icons">
