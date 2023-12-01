@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.attention{
+    font-size: 30px;
+}
 body{
     background-color: black;
     color: #fff;
