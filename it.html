@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frashbash2023</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="apply.css">
+    <script src="https://kit.fontawesome.com/5d5441cdc0.js" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">FreshBash-2023</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Galary</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="register.html" class="haier_me">Register</a>
+        <div for="check" class="toggle_btn" >
+            <i class="fa solid fa-bars"></i>
+        </div>
+    </nav>
+    <div class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Galary</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="register.html" class="haier_me">Register</a></li>
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa solid fa-xmark'
+            : 'fa solid fa-bars'
+        }
+    </script>
+
+
+<form id="form">
+    <div class="bihari">
+        <center>
+            <h1>IT Registeration</h1>
+        </center>
+        <hr>
+        <div id="res"></div>
+        <div class="div">
+            <label>
+                Roll no :
+            </label>
+            <select name="Roll no">
+                <option value="2204310130001">2204310130001</option>
+                <option value="2204310130002">2204310130002</option>
+                <option value="2204310130003">2204310130003</option>
+                <option value="2204310130004">2204310130004</option>
+                <option value="2204310130005">2204310130005</option>
+                <option value="2204310130006">2204310130006</option>
+                <option value="2204310130007">2204310130007</option>
+            
+                <option value="2204310130009">2204310130009</option>
+                <option value="2204310130010">2204310130010</option>
+
+                <option value="2204310130011">2204310130011</option>
+                
+
+                <option value="2204310130014">2204310130014</option>
+                <option value="2204310130015">2204310130015</option>
+                <option value="2204310130016">2204310130016</option>
+                <option value="2204310130017">2204310130017</option>
+                <option value="2204310130018">2204310130018</option>
+                <option value="2204310130019">2204310130019</option>
+                <option value="2204310130020">2204310130020</option>
+
+                <option value="2204310130021">2204310130021</option>
+                <option value="2204310130022">2204310130022</option>
+                <option value="2204310130023">2204310130023</option>
+                <option value="2204310130024">2204310130024</option>
+            
+                <option value="2204310130026">2204310130026</option>
+                <option value="2204310130027">2204310130027</option>
+                <option value="2204310130028">2204310130028</option>
+                <option value="2204310130029">2204310130029</option>
+                <option value="2204310130030">2204310130030</option>
+
+                <option value="2204310130031">2204310130031</option>
+                <option value="2204310130032">2204310130032</option>
+                
+
+
+                <option value="2204310130035">2204310130035</option>
+                <option value="2204310130036">2204310130036</option>
+                <option value="2204310130037">2204310130037</option>
+                <option value="2204310130038">2204310130038</option>
+                
+                <option value="2204310130040">2204310130040</option>
+
+            </select>
+        </div>
+        <label>Name </label>
+        <input type="text" name="Name" placeholder="Name" size="15" required />
+        <div class="div">
+            <label>
+                Branch :
+            </label>
+            <select name="Branch">
+                <!-- <option value="CSE">CSE </option>  -->
+                <option value="IT">IT</option>
+            </select>
+        </div>
+        <div class="div">
+            <label>
+                Year :
+            </label>
+           <!-- <input type="radio" value="1st" name="Year" > 1st -->
+            <input type="radio" value="2nd" name="Year" >2nd
+        </div>
+        <label>
+            Phone :
+        </label>
+        <input type="text" name="Phone" placeholder="Phone no." size="10" / required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="Email" required>
+        <button name="btn" type="submit" class="registerbtn">Submit</button>
+    </div>
+</form>
+<script>
+    let url = 'https://script.google.com/macros/s/AKfycbxYayA-Hei971ZXOohEOSiZM5v_UBTomXTtq3Kulg7M2VmRFgHufwq1fpq3gj77QRJZsw/exec'
+    let form = document.querySelector('#form');
+    form.addEventListener("submit",(e)=>{
+        e.target.btn.innerHTML="Submitting";
+        let d=new FormData(form);
+        fetch(url,{
+            method:"POST",
+            body:d
+        }).then((res)=>res.text())
+        .then((finalRes)=>{
+            e.target.btn.innerHTML="Submit"
+            document.getElementById("res").innerHTML=finalRes;
+            form.reset();
+            setTimeout(()=>{
+                document.getElementById("res").innerHTML='';
+            },5000)
+            console.log(finalRes)
+        })
+        e.preventDefault();
+    })
+</script>
+
+    
+    <!-- footer -->
+
+    <div class="footer">
+        <a href="#">Photos</a>
+        <a href="#">Videos</a>
+        <a href="#">Contact</a>
+        <p>NH-24, Sitapur Road, B.K.T., Lucknow - 226201</p>
+
+        <div class="social-icons">
+            <a href="contact.html"><i class="fa-solid fa-phone-volume"></i></a>
+            <a href=""><i class="fas fa-envelope"></i></a>
+            <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div id="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+        <p>&copy; 2023 College Fresher's Event</p>
+    </div>
+
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("back-to-top").style.display = "block";
+            } else {
+                document.getElementById("back-to-top").style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+</body>
+</html>
